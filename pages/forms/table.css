@@ -1,0 +1,31 @@
+
+@media(max-width: 767px){
+    .table {
+        display: none;
+    }
+    .table, .table tr, .table td{
+        display: inline-flex;
+        width: 100%;
+    }
+    .table tr{
+        margin-bottom: 15%;
+    }
+    .table td{
+        text-align: right;
+        padding-left: 50%;
+        text-align: right;
+        position: relative;
+    }
+    .table td::before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .td a{
+        
+    }
+}
