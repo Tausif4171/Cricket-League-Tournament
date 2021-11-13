@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link href="style.css" rel="stylesheet">
+    
     <title>Cricket Player Statistics</title>
     <link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -201,136 +202,57 @@ while($res = mysqli_fetch_array($query)){
 
     <table style="margin-top: 940px; margin-bottom:700px">
         <tr id="header">
-            <th>First name</th>
-            <th>Last name</th>
-            <th>Age</th>
-            <th>Country</th>
-            <th>Gender</th>
+            <th>Id</th>
+            <th>Teams</th>
+            <th>Play</th>
+            <th>Win</th>
+            <th>Loose</th>
+            <th>Tie</th>
+            <th>Draw</th>
+            <th>NR</th>
+            <th>PCT</th>
+            <th>PTS</th>
         </tr>
         <tr>
-            <td>John </td>
-            <td>Doe </td>
-            <td>25 </td>
-            <td>USA </td>
-            <td>Male </td>
-
-        </tr>
-        <tr>
-            <td>steve </td>
-            <td>Doe </td>
-            <td>28 </td>
-            <td>USA </td>
-            <td>Male </td>
-
-        </tr>
-        <tr>
-            <td>simo </td>
-            <td>Doe </td>
-            <td>26 </td>
-            <td>USA </td>
-            <td>Male </td>
-
-        </tr>
-        <tr>
-            <td>karim </td>
-            <td>Doe </td>
-            <td>21 </td>
-            <td>USA </td>
-            <td>Male </td>
-
-        </tr>
-        <tr>
-            <td>adam </td>
-            <td>Doe </td>
-            <td>20 </td>
-            <td>USA </td>
-            <td>Male </td>
-
-        </tr>
-        <tr>
-            <td>keven </td>
-            <td>Doe </td>
-            <td>20 </td>
-            <td>USA </td>
-            <td>Male </td>
+            <td><?php echo $res['id']; ?></td>
+            <td><?php echo $res['teams']; ?> </td>
+            <td><?php echo $res['play']; ?> </td>
+            <td><?php echo $res['win']; ?> </td>
+            <td><?php echo $res['loose']; ?> </td>
+            <td><?php echo $res['tie']; ?> </td>
+            <td><?php echo $res['draw']; ?> </td>
+            <td><?php echo $res['NR']; ?> </td>
+            <td><?php echo $res['PCT']; ?> </td>
+            <td><?php echo $res['PTS']; ?> </td>
 
         </tr>
 
     </table>
 
-    <h1 style=" margin-bottom:700px">Venue</h1>
+    <h1 style=" margin-bottom:700px">Venue / Results</h1>
     <!-- <hr> -->
 
     <table style="margin-top: 1510px ">
         <tr id="header">
-            <th>First name</th>
-            <th>Last name</th>
-            <th>Age</th>
-            <th>Country</th>
-            <th>Gender</th>
+            <th>Id</th>
+            <th>Match</th>
+            <th>Venue</th>
+            <th>Results</th>
+            
         </tr>
         <tr>
-            <td>John </td>
-            <td>Doe </td>
-            <td>25 </td>
-            <td>USA </td>
-            <td>Male </td>
+            <td><?php echo $res['id']; ?></td>
+            <td><?php echo $res['match']; ?> </td>
+            <td><?php echo $res['venue']; ?> </td>
+            <td><?php echo $res['results']; ?> </td>
 
         </tr>
-        <tr>
-            <td>steve </td>
-            <td>Doe </td>
-            <td>28 </td>
-            <td>USA </td>
-            <td>Male </td>
-
-        </tr>
-        <tr>
-            <td>simo </td>
-            <td>Doe </td>
-            <td>26 </td>
-            <td>USA </td>
-            <td>Male </td>
-
-        </tr>
-        <tr>
-            <td>karim </td>
-            <td>Doe </td>
-            <td>21 </td>
-            <td>USA </td>
-            <td>Male </td>
-
-        </tr>
-        <tr>
-            <td>adam </td>
-            <td>Doe </td>
-            <td>20 </td>
-            <td>USA </td>
-            <td>Male </td>
-
-        </tr>
-        <tr>
-            <td>keven </td>
-            <td>Doe </td>
-            <td>20 </td>
-            <td>USA </td>
-            <td>Male </td>
-
-        </tr>
-
     </table>
-
-
-
-
-
 
     <div class="footer" style="background-color: #333; height:50px;">
     <br>
         <h6 style="text-align: center;margin-top:-10px; color: white;">Copyright © 2021 <a href="index.php">Cricket League Tournament</a>. All rights reserved.</h6>
 </div>
-
-
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
