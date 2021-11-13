@@ -8,7 +8,7 @@ session_start();
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cricket League Tournament | Causes</title>
+  <title>Cricket League Tournament | Match Details</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -94,34 +94,34 @@ session_start();
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="../forms/causes.php" class="nav-link">
+                  <a href="../forms/countries.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Causes</p>
+                    <p>Countries</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="../forms/legal.php" class="nav-link">
+                  <a href="../forms/afghanistan_players.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>legal Forms</p>
+                    <p>Afghanistan Players</p>
                   </a>
                 </li>
 
                 <li class="nav-item">
-                  <a href="../forms/institute.php" class="nav-link">
+                  <a href="../forms/match_details.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Institute Courses</p>
+                    <p>Match Details</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="../forms/events.php" class="nav-link">
+                  <a href="../forms/india_players.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Events</p>
+                    <p>India Players</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="../forms/volunteers.php" class="nav-link">
+                  <a href="../forms/tournament_score.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Volunteers</p>
+                    <p>Tournament Score</p>
                   </a>
                 </li>
               </ul>
@@ -151,54 +151,21 @@ session_start();
             <div class="container">
               <div class="col-lg-12">
                 <br><br>
-                <h1 class="text-info text-center">India Players Form Details</h1>
-                <a href="insert4.php"><button class="btn btn-success text-right">✓Add Players Details</button></a>
+                <h1 class="text-info text-center">Match Details Form</h1>
+                <a href="insert2.php"><button class="btn btn-success text-right">✓Add Match Details</button></a>
                 <br><br>
                 <table id="datatableid" class="table table-striped table-hover table-bordered">
 
                   <thead>
                     <tr class="bg-dark text-white text-center">
                       <th>Id</th>
-                      <th>Full Name</th>
-                      <th>Country</th>
-                      <th>Playing Role</th>
-                      <th>Born</th>
-                      <th>Age</th>
-                      <th>Batting Style</th>
-                      <th>Bowling Style</th>
-                      <th>Major Teams</th>
-
-
-                      <th>Mat</th>
-                      <th>Inns</th>
-                      <th>NO</th>
-                      <th>Runs</th>
-                      <th>HS</th>
-                      <th>Ave</th>
-                      <th>BF</th>
-                      <th>SR</th>
-                      <th>4s</th>
-                      <th>6s</th>
-                      <th>Ct</th>
-                      <th>St</th>
-                      <th>100</th>
-                      <th>50</th>
-
-                      <th>Mat</th>
-                      <th>Inns</th>
-                      <th>Balls</th>
-                      <th>Runs</th>
-                      <th>Wkts</th>
-                      <th>BBI</th>
-                      <th>BBM</th>
-                      <th>Ave</th>
-                      <th>Econ</th>
-                      <th>SR</th>
-                      <th>4w</th>
-                      <th>5w</th>
-                      <th>10w</th>
-
-                      <th>Image</th>
+                      <th>Teams</th>
+                      <th>Winner</th>
+                      <th>Looser</th>
+                      <th>Man of the Match</th>
+                      <th>Bowler of the Match</th>
+                      <th>Best Fielder</th>
+                      
                       <th>Delete</th>
                       <!-- <th>Update</th> -->
                     </tr>
@@ -208,7 +175,7 @@ session_start();
 
                   include 'conn.php';
 
-                  $q = "select * from india_players_details";
+                  $q = "select * from match_details";
                   $query = mysqli_query($conn, $q);
                   while ($res = mysqli_fetch_array($query)) {
 
@@ -217,46 +184,13 @@ session_start();
 
                     <tr class="text-center">
                       <td><?php echo $res['id']; ?></td>
-                      <td><?php echo $res['fullName'] ?></td>
-                      <td><?php echo $res['country'] ?></td>
-                      <td><?php echo $res['playingRole'] ?></td>
-                      <td><?php echo $res['born'] ?></td>
-                      <td><?php echo $res['currentAge'] ?></td>
-                      <td><?php echo $res['battingStyle'] ?></td>
-                      <td><?php echo $res['bowlingStyle'] ?></td>
-                      <td><?php echo $res['majorTeams'] ?></td>
-
-                      <td><?php echo $res['Mat'] ?></td>
-                      <td><?php echo $res['Inns'] ?></td>
-                      <td><?php echo $res['NO'] ?></td>
-                      <td><?php echo $res['Runs'] ?></td>
-                      <td><?php echo $res['HS'] ?></td>
-                      <td><?php echo $res['Ave'] ?></td>
-                      <td><?php echo $res['BF'] ?></td>
-                      <td><?php echo $res['SR'] ?></td>
-                      <td><?php echo $res['4s'] ?></td>
-                      <td><?php echo $res['6s'] ?></td>
-                      <td><?php echo $res['Ct'] ?></td>
-                      <td><?php echo $res['St'] ?></td>
-                      <td><?php echo $res['100'] ?></td>
-                      <td><?php echo $res['50'] ?></td>
-
-                      <td><?php echo $res['Mat'] ?></td>
-                      <td><?php echo $res['Inns'] ?></td>
-                      <td><?php echo $res['Balls'] ?></td>
-                      <td><?php echo $res['Runs'] ?></td>
-                      <td><?php echo $res['Wkts'] ?></td>
-                      <td><?php echo $res['BBI'] ?></td>
-                      <td><?php echo $res['BBM'] ?></td>
-                      <td><?php echo $res['Ave'] ?></td>
-                      <td><?php echo $res['Econ'] ?></td>
-                      <td><?php echo $res['SR'] ?></td>
-                      <td><?php echo $res['4w'] ?></td>
-                      <td><?php echo $res['5w'] ?></td>
-                      <td><?php echo $res['10'] ?></td>
-
-                      <td><a href="<?php echo "uploads/" . $res['file']; ?>" width="50px" alt="Image" target="_blank" style="color:white"><button type="button" class="btn-info btn">View</button></a></td>
-
+                      <td><?php echo $res['teams'] ?></td>
+                      <td><?php echo $res['winner'] ?></td>
+                      <td><?php echo $res['looser'] ?></td>
+                      <td><?php echo $res['man_of_match'] ?></td>
+                      <td><?php echo $res['bowler_of_match'] ?></td>
+                      <td><?php echo $res['best_fielder'] ?></td>
+                     
                       <td><button type="button" class="btn-danger btn deletebtn">Delete</button></td>
                       <!-- <td><button class="btn-primary btn editbtn"><a href="update1.php">Update</a></button></td> -->
 
@@ -333,7 +267,7 @@ session_start();
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <form action="delete4.php" method="POST">
+                  <form action="delete2.php" method="POST">
 
                     <div class="modal-body">
                       <input type="hidden" name="delete_id" id="delete_id">

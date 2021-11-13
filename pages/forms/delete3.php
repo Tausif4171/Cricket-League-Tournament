@@ -10,7 +10,7 @@ if(isset($_POST['deletedata']))
   $q = "DELETE FROM `tournament_score` WHERE id = $id ";
   mysqli_query($conn, $q);
   
-  header('location:volunteers.php');
+  header('location:tournament_score.php');
 }
 
 ?>

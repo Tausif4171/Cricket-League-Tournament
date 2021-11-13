@@ -8,7 +8,7 @@ session_start();
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cricket League Tournament | Causes</title>
+  <title>Cricket League Tournament | Countries</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -56,6 +56,7 @@ session_start();
       <div class="sidebar">
         <!-- Sidebar user (optional) -->
 
+
         <!-- SidebarSearch Form -->
         <div class="form-inline">
           <div class="input-group" data-widget="sidebar-search">
@@ -94,34 +95,34 @@ session_start();
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="../forms/causes.php" class="nav-link">
+                  <a href="../forms/countries.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Causes</p>
+                    <p>Countries</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="../forms/legal.php" class="nav-link">
+                  <a href="../forms/afghanistan_players.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>legal Forms</p>
+                    <p>Afghanistan Players</p>
                   </a>
                 </li>
 
                 <li class="nav-item">
-                  <a href="../forms/institute.php" class="nav-link">
+                  <a href="../forms/match_details.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Institute Courses</p>
+                    <p>Match Details</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="../forms/events.php" class="nav-link">
+                  <a href="../forms/india_players.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Events</p>
+                    <p>India Players</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="../forms/volunteers.php" class="nav-link">
+                  <a href="../forms/tournament_score.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Volunteers</p>
+                    <p>Tournament Score</p>
                   </a>
                 </li>
               </ul>
@@ -129,7 +130,6 @@ session_start();
             </li>
 
             </li>
-
           </ul>
         </nav>
         <!-- /.sidebar-menu -->
@@ -147,25 +147,22 @@ session_start();
         <div class="container-fluid">
           <div class="row">
 
-
             <div class="container">
               <div class="col-lg-12">
                 <br><br>
-                <h1 class="text-info text-center">Match Details Form</h1>
-                <a href="insert2.php"><button class="btn btn-success text-right">✓Add Match Details</button></a>
+                <h1 class="text-info text-center">Countries Form Details</h1>
+                <a href="insert1.php"><button class="btn btn-success text-right">✓Add Countries Details</button></a>
                 <br><br>
                 <table id="datatableid" class="table table-striped table-hover table-bordered">
 
                   <thead>
                     <tr class="bg-dark text-white text-center">
                       <th>Id</th>
-                      <th>Teams</th>
-                      <th>Winner</th>
-                      <th>Looser</th>
-                      <th>Man of the Match</th>
-                      <th>Bowler of the Match</th>
-                      <th>Best Fielder</th>
-                      
+                      <th>Name</th>
+                      <th>Flag</th>
+                      <!-- <th>Goal</th>
+                      <th>Description</th>
+                      <th>File</th> -->
                       <th>Delete</th>
                       <!-- <th>Update</th> -->
                     </tr>
@@ -175,7 +172,7 @@ session_start();
 
                   include 'conn.php';
 
-                  $q = "select * from match_details";
+                  $q = "select * from countries";
                   $query = mysqli_query($conn, $q);
                   while ($res = mysqli_fetch_array($query)) {
 
@@ -184,13 +181,11 @@ session_start();
 
                     <tr class="text-center">
                       <td><?php echo $res['id']; ?></td>
-                      <td><?php echo $res['teams'] ?></td>
-                      <td><?php echo $res['winner'] ?></td>
-                      <td><?php echo $res['looser'] ?></td>
-                      <td><?php echo $res['man_of_match'] ?></td>
-                      <td><?php echo $res['bowler_of_match'] ?></td>
-                      <td><?php echo $res['best_fielder'] ?></td>
-                     
+                      <td><?php echo $res['name']; ?></td>
+
+
+                      <td><a href="<?php echo "uploads/" . $res['file']; ?>" width="50px" alt="Image" target="_blank" style="color:white"><button type="button" class="btn-info btn">View</button></a></td>
+
                       <td><button type="button" class="btn-danger btn deletebtn">Delete</button></td>
                       <!-- <td><button class="btn-primary btn editbtn"><a href="update1.php">Update</a></button></td> -->
 
@@ -256,7 +251,6 @@ session_start();
               });
             </script>
 
-
             <!-- Modal -->
             <div class="modal fade" id="deletemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog" role="document">
@@ -267,7 +261,7 @@ session_start();
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <form action="delete2.php" method="POST">
+                  <form action="delete1.php" method="POST">
 
                     <div class="modal-body">
                       <input type="hidden" name="delete_id" id="delete_id">

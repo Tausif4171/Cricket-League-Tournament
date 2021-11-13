@@ -10,7 +10,7 @@ if(isset($_POST['deletedata']))
   $q = "DELETE FROM `india_players_details` WHERE id = $id ";
   mysqli_query($conn, $q);
   
-  header('location:events.php');
+  header('location:india_players.php');
 }
 
 ?>

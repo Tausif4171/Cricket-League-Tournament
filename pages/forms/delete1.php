@@ -10,7 +10,7 @@ if(isset($_POST['deletedata']))
   $q = "DELETE FROM `countries` WHERE id = $id ";
   mysqli_query($conn, $q);
   
-  header('location:causes.php');
+  header('location:countries.php');
 }
 
 ?>

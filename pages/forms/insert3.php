@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cricket League Tournament | Causes</title>
+  <title>Cricket League Tournament | Tournament Score</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -88,34 +88,34 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="../forms/causes.php" class="nav-link">
+                  <a href="../forms/countries.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Causes</p>
+                    <p>Countries</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="../forms/legal.php" class="nav-link">
+                  <a href="../forms/afghanistan_players.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>legal Forms</p>
+                    <p>Afghanistan Players</p>
                   </a>
                 </li>
 
                 <li class="nav-item">
-                  <a href="../forms/institute.php" class="nav-link">
+                  <a href="../forms/match_details.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Institute Courses</p>
+                    <p>Match Details</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="../forms/events.php" class="nav-link">
+                  <a href="../forms/india_players.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Events</p>
+                    <p>India Players</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="../forms/volunteers.php" class="nav-link">
+                  <a href="../forms/tournament_score.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Volunteers</p>
+                    <p>Tournament Score</p>
                   </a>
                 </li>
               </ul>

@@ -10,7 +10,7 @@ if(isset($_POST['deletedata']))
   $q = "DELETE FROM `match_details` WHERE id = $id ";
   mysqli_query($conn, $q);
   
-  header('location:institute.php');
+  header('location:match_details.php');
   
 }
 
