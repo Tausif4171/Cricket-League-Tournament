@@ -42,5 +42,3 @@ $query = mysqli_query($conn,$result);
 
 
 }
-
-?>

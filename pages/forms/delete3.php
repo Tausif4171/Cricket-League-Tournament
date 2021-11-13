@@ -12,5 +12,3 @@ if(isset($_POST['deletedata']))
   
   header('location:tournament_score.php');
 }
-
-?>

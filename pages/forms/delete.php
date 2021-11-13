@@ -12,7 +12,3 @@ if(isset($_POST['deletedata']))
   
   header('location:afghanistan_players.php');
 }
-
-
-?>
-

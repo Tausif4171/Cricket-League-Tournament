@@ -1,0 +1,80 @@
+
+#team0{
+    text-align:center; width: 427px; margin-left:400px
+}
+#team0_1{
+    width: 180px; height: 100px;
+}
+#table0{
+    margin-bottom:800px;
+}
+#table_0{
+    margin-top: 1194px; margin-bottom:1700px;
+}
+#table1{
+    margin-bottom:690px
+}
+#table_1{
+    margin-top: 1990px;
+}
+
+#match{
+    margin-top: 1645px; margin-bottom:700px;
+}
+#match1{
+    margin-top: 1672px; margin-bottom:700px;
+}
+#tour {
+    font-weight: 600;
+    text-align: center;
+    background-color: #16a085;
+    color: #fff;
+    padding: 10px 0px;
+    margin-bottom:840px;
+}
+@media(max-width: 767px){
+    #team1{
+        margin-left: 40px;
+    }
+    #team{
+        margin-top: 40px;
+    }
+    #countries{
+        margin-left:90px;
+    }
+    #team0{
+        text-align:center; width: 256px; margin-left:26px;
+    }
+    #team0_1{
+        width: 140px; height: 90px;
+    }
+    #table0{
+        margin-bottom:880px;
+    }
+    #table_0{
+        margin-top: 3620px; margin-bottom:700px;
+    }
+    #table1{
+        margin-bottom:1750px;
+    }
+    #table_1{
+        margin-top: 5010px;
+    }
+    #footer{
+        margin-top: 400px;
+    }
+    #tour {
+        font-weight: 600;
+        text-align: center;
+        background-color: #16a085;
+        color: #fff;
+        padding: 10px 0px;
+        margin-bottom:1220px;
+    }
+    #match{
+        margin-top: 4550px; margin-bottom:700px;
+    }
+    #match1{
+        margin-top: 4570px; margin-bottom:700px;
+    }
+}

@@ -7,8 +7,8 @@ if(isset($_POST['deletedata']))
   $id = $_POST['delete_id'];
 
 
-  $q = "DELETE FROM `countries` WHERE id = $id ";
+  $q = "DELETE FROM `venue` WHERE id = $id ";
   mysqli_query($conn, $q);
   
-  header('location:countries.php');
+  header('location:venue.php');
 }

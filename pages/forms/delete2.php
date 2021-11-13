@@ -13,8 +13,3 @@ if(isset($_POST['deletedata']))
   header('location:match_details.php');
   
 }
-
-
-?>
-
-

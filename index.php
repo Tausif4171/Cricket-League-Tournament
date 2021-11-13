@@ -1,305 +1,270 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cricket League Tournament | Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="style.css" rel="stylesheet">
 
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- Tempusdominus Bootstrap 4 -->
-  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- JQVMap -->
-  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
-  <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
-  <!-- summernote -->
-  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+    <title>Cricket League Tournament</title>
+    <link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .starter-template tr {
+            line-height: 30px;
+        }
+
+        .mt20 {
+            margin-top: 20px;
+        }
+
+
+        table {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-collapse: collapse;
+            width: 800px;
+            height: 200px;
+            border: 1px solid #bdc3c7;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        tr {
+            transition: all .2s ease-in;
+            cursor: pointer;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #header {
+            background-color: #16a085;
+            color: #fff;
+        }
+
+        h1 {
+            font-weight: 600;
+            text-align: center;
+            background-color: #16a085;
+            color: #fff;
+            padding: 10px 0px;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+            transform: scale(1.02);
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @media only screen and (max-width: 768px) {
+            table {
+                width: 90%;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/5.0/examples/starter-template/starter-template.css" rel="stylesheet">
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
 
-  <!-- Preloader -->
-  <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-  </div>
+<body>
+    <div style="overflow: hidden;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
-      </li>
-    </ul>
 
-    <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
-    </ul>
-  </nav>
-  <!-- /.navbar -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.php" style="font-size:18px">Home <span class="sr-only">(current)</span></a>
+                        </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="index.php" class="brand-link">
-        <img src="dist/img/favicon.ico" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-          style="opacity: .8">
-        <span class="brand-text font-weight-light" style="font-size:18px">Cricket Tournament</span>
-      </a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" style="font-size:18px" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Teams
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="india.php">India</a>
+                                <a class="dropdown-item" href="afghanistan.php">Afghanistan</a>
+                                <div class="dropdown-divider"></div>
 
-    
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <br>
+                            </div>
+                        </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-      <!-- SidebarSearch Form -->
-      <div class="form-inline">
-        <div class="input-group" data-widget="sidebar-search">
-          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-          <div class="input-group-append">
-            <button class="btn btn-sidebar">
-              <i class="fas fa-search fa-fw"></i>
-            </button>
-          </div>
-        </div>
-      </div>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" style="font-size:18px" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Players
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="india_player_details.php">India - Players Details</a>
+                                <a class="dropdown-item" href="afghanistan_player_details.php">Afghanistan - Players Details</a>
+                                <div class="dropdown-divider"></div>
 
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
-            <a href="./index.php" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Dashboard
-               
-              </p>
-            </a>
-           
-          </li>
+                            </div>
+                        </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
-              <p>
-                Our Pages
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/forms/countries.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Countries</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/afghanistan_players.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Afghanistan Players</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/match_details.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Match Details</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/india_players.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>India Players</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/tournament_score.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Tournament Score</p>
-                </a>
-              </li>
-              
-            </ul>
-          </li>
-          
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/forms/index.php" style="font-size:18px">Dashboard</a>
+                        </li>
+
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <main class="container">
+            <div class="starter-template py-5" id="countries">
+
+                <h2 style="margin-top: 50px; text-align:center; margin-bottom:70px; color:#16a085; font-size:42px">Countries</h2>
+                <div class="row">
+                    <?php
+
+                    include 'pages/forms/conn.php';
+
+                    $q = "select * from countries";
+                    $query = mysqli_query($conn, $q);
+                    while ($res = mysqli_fetch_array($query)) {
+
+
+                    ?>
+                        <div class="col-md-3" style="margin-bottom:40px">
+                            <img src="<?php echo "pages/forms/uploads/" . $res['file']; ?>" style="width: 200px; height: 100px; margin-bottom:12px" alt="">
+                            <h3 style="margin-left:0px"><?php echo $res['name']; ?></h3>
+                        </div>
+
+                    <?php
+                    }
+                    ?>
+                </div>
+
+
+            </div>
+
+        </main>
+        <!-- /.container -->
+
+
+        <h1 id="table0">Tournament Score Table</h1>
+        <!-- <hr> -->
+
+        <table id="table_0">
+
+            <tr id="header">
+                <th>Id</th>
+                <th>Teams</th>
+                <th>Play</th>
+                <th>Win</th>
+                <th>Loose</th>
+                <th>Tie</th>
+                <th>Draw</th>
+                <th>NR</th>
+                <th>PCT</th>
+                <th>PTS</th>
+            </tr>
+            <?php
+
+            include 'pages/forms/conn.php';
+
+            $q = "select * from tournament_score";
+            $query = mysqli_query($conn, $q);
+            while ($res = mysqli_fetch_array($query)) {
+
+
+            ?>
+                <tr>
+                    <td><?php echo $res['id']; ?></td>
+                    <td><?php echo $res['teams']; ?> </td>
+                    <td><?php echo $res['play']; ?> </td>
+                    <td><?php echo $res['win']; ?> </td>
+                    <td><?php echo $res['loose']; ?> </td>
+                    <td><?php echo $res['tie']; ?> </td>
+                    <td><?php echo $res['draw']; ?> </td>
+                    <td><?php echo $res['NR']; ?> </td>
+                    <td><?php echo $res['PCT']; ?> </td>
+                    <td><?php echo $res['PTS']; ?> </td>
+
+                </tr>
+            <?php
+            }
+            ?>
+        </table>
     </div>
-    <!-- /.sidebar -->
-  </aside>
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
-          </div><!-- /.col -->
-          
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
+    <h1 id="table1">Venue / Results</h1>
+    <!-- <hr> -->
+
+    <table id="table_1">
+
+        <tr id="header">
+            <th>Id</th>
+            <th>Match</th>
+            <th>Venue</th>
+            <th>Results</th>
+
+        </tr>
+        <?php
+
+        include 'pages/forms/conn.php';
+
+        $q = "select * from venue";
+        $query = mysqli_query($conn, $q);
+        while ($res = mysqli_fetch_array($query)) {
+
+
+        ?>
+            <tr>
+                <td><?php echo $res['id']; ?></td>
+                <td><?php echo $res['match']; ?> </td>
+                <td><?php echo $res['venue']; ?> </td>
+                <td><?php echo $res['results']; ?> </td>
+
+            </tr>
+        <?php
+        }
+        ?>
+    </table>
+
+    <div class="footer" style="background-color: #333; height:50px;">
+        <br>
+        <h6 style="text-align: center;margin-top:-10px; color: white;">Copyright © 2021 <a href="index.php" style="color:#16a085; text-decoration:none">Cricket League Tournament</a>. All rights reserved.</h6>
     </div>
-    <!-- /.content-header -->
 
-    <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
-        <!-- Small boxes (Stat box) -->
-        <div class="row">
-        
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
-                <h3>150</h3>
 
-                <p>Countries</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-bag"></i>
-              </div>
-              <a href="pages/forms/countries.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3>65</h3>
-
-                <p>India Players</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div>
-              <a href="pages/forms/india_players.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>53</h3>
-
-                <p>Afghanistan Players</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-stats-bars"></i>
-              </div>
-              <a href="pages/forms/afghanistan_players.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
-              <div class="inner">
-                <h3>44</h3>
-
-                <p>Match Details</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-person-add"></i>
-              </div>
-              <a href="pages/forms/match_details.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3>65</h3>
-
-                <p>Tournament Score</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div>
-              <a href="pages/forms/tournament_score.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-        </div>
-        <!-- /.row -->
-        <!-- Main row -->
-        
-          </section>
-          <!-- right col -->
-        </div>
-        <!-- /.row (main row) -->
-      </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-  <strong>Copyright &copy; 2021 <a href="">Cricket League Tournament</a>.</strong>
-    All rights reserved.
-  </footer>
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
-
-<!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button)
-</script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- ChartJS -->
-<script src="plugins/chart.js/Chart.min.js"></script>
-<!-- Sparkline -->
-<script src="plugins/sparklines/sparkline.js"></script>
-<!-- JQVMap -->
-<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-<script src="plugins/moment/moment.min.js"></script>
-<script src="plugins/daterangepicker/daterangepicker.js"></script>
-<!-- Tempusdominus Bootstrap 4 -->
-<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-<!-- Summernote -->
-<script src="plugins/summernote/summernote-bs4.min.js"></script>
-<!-- overlayScrollbars -->
-<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="dist/js/pages/dashboard.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
 </body>
+
 </html>

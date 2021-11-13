@@ -13,10 +13,10 @@ session_start();
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="  plugins/fontawesome-free/css/all.min.css">
 
   <!-- Theme style -->
-  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="  dist/css/adminlte.min.css">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -34,7 +34,7 @@ session_start();
           <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="../../index3.html" class="nav-link">Home</a>
+          <a href="  index.php" class="nav-link">Home</a>
         </li>
       </ul>
 
@@ -47,8 +47,8 @@ session_start();
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
-      <a href="../../index.php" class="brand-link">
-        <img src="../../dist/img/favicon.ico" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <a href="  index.php" class="brand-link">
+        <img src="  dist/img/favicon.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light" style="font-size:18px">Cricket Tournament</span>
       </a>
 
@@ -74,7 +74,7 @@ session_start();
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item menu-open">
-              <a href="../../index.php" class="nav-link active">
+              <a href="  index.php" class="nav-link active">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                   Dashboard
@@ -100,6 +100,12 @@ session_start();
                   </a>
                 </li>
                 <li class="nav-item">
+                  <a href="../forms/india_players.php" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>India Players</p>
+                  </a>
+                </li>
+                <li class="nav-item">
                   <a href="../forms/afghanistan_players.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Afghanistan Players</p>
@@ -113,9 +119,9 @@ session_start();
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="../forms/india_players.php" class="nav-link">
+                  <a href="../forms/venue.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>India Players</p>
+                    <p>Venue</p>
                   </a>
                 </li>
                 <li class="nav-item">
@@ -160,6 +166,7 @@ session_start();
                     <tr class="bg-dark text-white text-center">
                       <th>Id</th>
                       <th>Full Name</th>
+                      <th>Country</th>
                       <th>Playing Role</th>
                       <th>Born</th>
                       <th>Age</th>
@@ -195,7 +202,7 @@ session_start();
                       <th>SR</th>
                       <th>4w</th>
                       <th>5w</th>
-                      <th>10</th>
+                      <th>10w</th>
 
                       <th>Image</th>
                       <th>Delete</th>
@@ -217,6 +224,7 @@ session_start();
                     <tr class="text-center">
                       <td><?php echo $res['id']; ?></td>
                       <td><?php echo $res['fullName'] ?></td>
+                      <td><?php echo $res['country'] ?></td>
                       <td><?php echo $res['playingRole'] ?></td>
                       <td><?php echo $res['born'] ?></td>
                       <td><?php echo $res['currentAge'] ?></td>
@@ -267,36 +275,6 @@ session_start();
               </div>
 
             </div>
-
-
-            <script>
-              $(document).ready(function() {
-
-                $('.editbtn').on('click', function() {
-
-                  // $('#deletemodal').modal('show');
-
-                  $tr = $(this).closest('tr');
-
-                  var data = $tr.children("td").map(function() {
-                    return $(this).text();
-                  }).get();
-
-                  console.log(data);
-
-                  $('#update_id').val(data[0]);
-                  $('#name').val(data[1]);
-                  $('#amount').val(data[2]);
-                  $('#goal').val(data[3]);
-                  $('#desc').val(data[4]);
-                  $('#file').val(data[5]);
-
-                });
-
-              });
-            </script>
-
-
 
             <script>
               $(document).ready(function() {
@@ -368,15 +346,15 @@ session_start();
   <!-- ./wrapper -->
 
   <!-- jQuery -->
-  <script src="../../plugins/jquery/jquery.min.js"></script>
+  <script src="  plugins/jquery/jquery.min.js"></script>
   <!-- Bootstrap 4 -->
-  <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="  plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- bs-custom-file-input -->
-  <script src="../../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+  <script src="  plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
   <!-- AdminLTE App -->
-  <script src="../../dist/js/adminlte.min.js"></script>
+  <script src="  dist/js/adminlte.min.js"></script>
   <!-- AdminLTE for demo purposes -->
-  <script src="../../dist/js/demo.js"></script>
+  <script src="  dist/js/demo.js"></script>
   <!-- Page specific script -->
   <script src="https://cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.11.2/js/dataTables.bootstrap5.min.js"></script>

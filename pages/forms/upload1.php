@@ -8,9 +8,6 @@ if(isset($_POST['submit'])){
 
 
     $name = $_POST['name'];
-    // $amount = $_POST['amount'];
-    // $goal = $_POST['goal'];
-    // $desc = $_POST['description'];
   $file = $_FILES['file']['name'];
 // $fileDestination = 'uploads/'.$fileNameNew;
 $result = "INSERT INTO `countries`(`name`, `file`) VALUES ('$name', '$file')";
@@ -35,5 +32,3 @@ $query = mysqli_query($conn,$result);
 
 
 }
-
-?>

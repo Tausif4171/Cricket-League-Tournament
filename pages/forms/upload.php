@@ -8,6 +8,7 @@ if(isset($_POST['submit'])){
 
 
     $fullName = $_POST['fullName'];
+    $country = $_POST['country'];
     $playingRole = $_POST['playingRole'];
     $born = $_POST['born'];
     $currentAge = $_POST['currentAge'];
@@ -48,10 +49,10 @@ if(isset($_POST['submit'])){
 $result = "INSERT INTO `afghanistan_players_details`(`fullName`, `born`, `currentAge`, `playingRole`, `battingStyle`, `bowlingStyle`, `majorTeams`, `Mat`, `Inns`,
  `NO`, `Runs`
 , `HS`, `Ave`, `BF`, `SR`, `4s`, `6s`, `Ct`, `St`, `100`, `50`
-, `Balls`, `Wkts`, `BBI`, `BBM`, `Econ`, `4w`, `5w`, `10`, `file`) VALUES 
+, `Balls`, `Wkts`, `BBI`, `BBM`, `Econ`, `4w`, `5w`, `10`, `file`, `country`) VALUES 
 ('$fullName', '$born', '$currentAge', '$playingRole', '$battingStyle', '$bowlingStyle', '$majorTeams', '$Mat', '$Inns', '$NO', '$Runs'
 , '$HS', '$Ave', '$BF', '$SR', '$fours', '$sixs', '$Ct', '$St', '$hundreds', '$fiftys'
-, '$Balls', '$Wkts', '$BBI', '$BBM', '$Econ', '$fourw', '$fivew', '$tens', '$file'
+, '$Balls', '$Wkts', '$BBI', '$BBM', '$Econ', '$fourw', '$fivew', '$tens', '$file', '$country'
 )";
 $query = mysqli_query($conn,$result);
 
@@ -73,5 +74,3 @@ $query = mysqli_query($conn,$result);
 
 
 }
-
-?>
