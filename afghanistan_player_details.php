@@ -144,7 +144,6 @@
 						</table>
 					</div>
 					<div class="col-lg-8">
-						<!-- <p><?php echo $res['profile'] ?></p> -->
 						<h4>Batting</h4>
 						<table width="100%">
 							<tr>

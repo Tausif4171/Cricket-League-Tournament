@@ -174,7 +174,7 @@
 
         <section style="margin-bottom: 110px;">
             <h1>Tournament Score Table</h1>
-            <!-- <hr> -->
+            <hr>
 
             <table style="margin-top: 60px;">
 
@@ -222,7 +222,7 @@
 
         <section style="margin-bottom: 110px;">
             <h1>Venue / Results</h1>
-
+            <hr>
 
             <table style="margin-top: 60px;">
 

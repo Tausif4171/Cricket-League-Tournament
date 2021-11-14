@@ -185,7 +185,7 @@
 
     <section style="margin-bottom: 110px; margin-top:40px">
       <h1>Match Details</h1>
-      <!-- <hr> -->
+      <hr>
 
       <table style="margin-top: 60px;">
         <tr id="header">

@@ -185,45 +185,45 @@
 
     <section style="margin-bottom: 110px; margin-top:40px">
 
-    <h1>Match Details</h1>
-    <!-- <hr> -->
+      <h1>Match Details</h1>
+      <hr>
 
-    <table style="margin-top: 60px;">
-      <tr id="header">
-        <th>Id</th>
-        <th>Teams</th>
-        <th>Winner</th>
-        <th>Looser</th>
-        <th>Man of the Match</th>
-        <th>Bowler of the Match</th>
-        <th>Best Fielder</th>
-
-      </tr>
-      <?php
-
-      include 'pages/forms/conn.php';
-
-      $q = "select * from match_details";
-      $query = mysqli_query($conn, $q);
-      while ($res = mysqli_fetch_array($query)) {
-
-
-      ?>
-        <tr>
-          <td><?php echo $res['id']; ?></td>
-          <td><?php echo $res['teams']; ?> </td>
-          <td><?php echo $res['winner']; ?> </td>
-          <td><?php echo $res['looser']; ?> </td>
-          <td><?php echo $res['man_of_match']; ?> </td>
-          <td><?php echo $res['bowler_of_match']; ?> </td>
-          <td><?php echo $res['best_fielder']; ?> </td>
+      <table style="margin-top: 60px;">
+        <tr id="header">
+          <th>Id</th>
+          <th>Teams</th>
+          <th>Winner</th>
+          <th>Looser</th>
+          <th>Man of the Match</th>
+          <th>Bowler of the Match</th>
+          <th>Best Fielder</th>
 
         </tr>
-      <?php
-      }
-      ?>
+        <?php
 
-    </table>
+        include 'pages/forms/conn.php';
+
+        $q = "select * from match_details";
+        $query = mysqli_query($conn, $q);
+        while ($res = mysqli_fetch_array($query)) {
+
+
+        ?>
+          <tr>
+            <td><?php echo $res['id']; ?></td>
+            <td><?php echo $res['teams']; ?> </td>
+            <td><?php echo $res['winner']; ?> </td>
+            <td><?php echo $res['looser']; ?> </td>
+            <td><?php echo $res['man_of_match']; ?> </td>
+            <td><?php echo $res['bowler_of_match']; ?> </td>
+            <td><?php echo $res['best_fielder']; ?> </td>
+
+          </tr>
+        <?php
+        }
+        ?>
+
+      </table>
     </section>
 
     <div class="footer" style="background-color: #333; height:50px;">
