@@ -37,15 +37,22 @@
     }
 
     table {
-      position: absolute;
-      left: 50%;
+      position: relative;
+      left: 23%;
       top: 50%;
-      transform: translate(-50%, -50%);
       border-collapse: collapse;
       width: 800px;
       height: 200px;
       border: 1px solid #bdc3c7;
       box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      font-weight: 600;
+      text-align: center;
+      background-color: #16a085;
+      color: #fff;
+      padding: 10px 0px;
     }
 
     tr {
@@ -136,15 +143,17 @@
     </nav>
     <main class="container">
 
-      <h1 style="text-align:center; margin-top: 90px; margin-bottom:50px;color:#16a085;">Team</h1>
+      <h2 style="margin-top: 50px; text-align:center; margin-bottom:50px; color:#16a085; font-size:42px">Team</h2>
 
       <nav aria-label="breadcrumb" id="team0" style="background-color: white;">
         <ol class="breadcrumb" style="background-color: white;">
           <li class="breadcrumb-item"><img src="image/img.png" alt="" id="team0_1" /></li>
-          <li aria-current="page" style="font-size:32px;  margin-top: 35px;margin-left:22px;">India</li>
+          <li aria-current="page" id="small1">India</li>
         </ol>
       </nav>
-      <h1 style="text-align:center;margin-bottom:50px; margin-top: 90px;color:#16a085;">Players</h1>
+
+      <h2 style="margin-top: 50px; text-align:center; margin-bottom:70px; color:#16a085; font-size:42px">Players</h2>
+
       <div class="row" id="team1">
         <?php
 
@@ -174,45 +183,47 @@
         <br><br><br>
     </main>
 
-    <h1 id="tour">Match Details</h1>
-    <!-- <hr> -->
+    <section style="margin-bottom: 110px; margin-top:40px">
+      <h1>Match Details</h1>
+      <!-- <hr> -->
 
-    <table id="match">
-      <tr id="header">
-        <th>Id</th>
-        <th>Teams</th>
-        <th>Winner</th>
-        <th>Looser</th>
-        <th>Man of the Match</th>
-        <th>Bowler of the Match</th>
-        <th>Best Fielder</th>
-
-      </tr>
-      <?php
-
-      include 'pages/forms/conn.php';
-
-      $q = "select * from match_details";
-      $query = mysqli_query($conn, $q);
-      while ($res = mysqli_fetch_array($query)) {
-
-
-      ?>
-        <tr>
-          <td><?php echo $res['id']; ?></td>
-          <td><?php echo $res['teams']; ?> </td>
-          <td><?php echo $res['winner']; ?> </td>
-          <td><?php echo $res['looser']; ?> </td>
-          <td><?php echo $res['man_of_match']; ?> </td>
-          <td><?php echo $res['bowler_of_match']; ?> </td>
-          <td><?php echo $res['best_fielder']; ?> </td>
+      <table style="margin-top: 60px;">
+        <tr id="header">
+          <th>Id</th>
+          <th>Teams</th>
+          <th>Winner</th>
+          <th>Looser</th>
+          <th>Man of the Match</th>
+          <th>Bowler of the Match</th>
+          <th>Best Fielder</th>
 
         </tr>
-      <?php
-      }
-      ?>
+        <?php
 
-    </table>
+        include 'pages/forms/conn.php';
+
+        $q = "select * from match_details";
+        $query = mysqli_query($conn, $q);
+        while ($res = mysqli_fetch_array($query)) {
+
+
+        ?>
+          <tr>
+            <td><?php echo $res['id']; ?></td>
+            <td><?php echo $res['teams']; ?> </td>
+            <td><?php echo $res['winner']; ?> </td>
+            <td><?php echo $res['looser']; ?> </td>
+            <td><?php echo $res['man_of_match']; ?> </td>
+            <td><?php echo $res['bowler_of_match']; ?> </td>
+            <td><?php echo $res['best_fielder']; ?> </td>
+
+          </tr>
+        <?php
+        }
+        ?>
+
+      </table>
+    </section>
 
     <div class="footer" style="background-color: #333; height:50px;">
       <br>

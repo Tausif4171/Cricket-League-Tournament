@@ -32,6 +32,13 @@
     padding: 10px 0px;
     margin-bottom:840px;
 }
+
+#small{
+    font-size:32px; margin-left:22px; margin-top: 27px;
+}
+#small1{
+    font-size:32px; margin-left:22px; margin-top: 27px;
+}
 @media(max-width: 767px){
     #team1{
         margin-left: 40px;
@@ -46,7 +53,7 @@
         text-align:center; width: 256px; margin-left:26px;
     }
     #team0_1{
-        width: 140px; height: 90px;
+        width: 140px; height: 90px; margin-left: 50px;
     }
     #table0{
         margin-bottom:880px;
@@ -77,4 +84,11 @@
     #match1{
         margin-top: 4570px; margin-bottom:700px;
     }
+    #small{
+        font-size:28px; margin-left: 46px;
+    }
+    #small1{
+        font-size:32px; margin-left: 88px;
+    }
+    
 }

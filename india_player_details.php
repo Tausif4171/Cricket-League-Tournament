@@ -91,7 +91,8 @@
 			</div>
 		</div>
 	</nav>
-	<h1 style="text-align:center;margin-bottom:10px; margin-top: 90px; color:#16a085;">India Players Details</h1>
+	<h2 style="margin-top: 50px; text-align:center; margin-bottom:50px; color:#16a085; font-size:42px">India Players Details</h2>
+
 	<main class="container">
 		<div class="starter-template py-5" style="margin-top: 20px;">
 			<?php

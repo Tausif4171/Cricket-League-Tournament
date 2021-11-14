@@ -39,10 +39,9 @@
 
 
         table {
-            position: absolute;
-            left: 50%;
+            position: relative;
+            left: 23%;
             top: 50%;
-            transform: translate(-50%, -50%);
             border-collapse: collapse;
             width: 800px;
             height: 200px;
@@ -173,97 +172,99 @@
         </main>
         <!-- /.container -->
 
+        <section style="margin-bottom: 110px;">
+            <h1>Tournament Score Table</h1>
+            <!-- <hr> -->
 
-        <h1 id="table0">Tournament Score Table</h1>
-        <!-- <hr> -->
+            <table style="margin-top: 60px;">
 
-        <table id="table_0">
+                <tr id="header">
+                    <th>Id</th>
+                    <th>Teams</th>
+                    <th>Play</th>
+                    <th>Win</th>
+                    <th>Loose</th>
+                    <th>Tie</th>
+                    <th>Draw</th>
+                    <th>NR</th>
+                    <th>PCT</th>
+                    <th>PTS</th>
+                </tr>
+                <?php
 
-            <tr id="header">
-                <th>Id</th>
-                <th>Teams</th>
-                <th>Play</th>
-                <th>Win</th>
-                <th>Loose</th>
-                <th>Tie</th>
-                <th>Draw</th>
-                <th>NR</th>
-                <th>PCT</th>
-                <th>PTS</th>
-            </tr>
-            <?php
+                include 'pages/forms/conn.php';
 
-            include 'pages/forms/conn.php';
-
-            $q = "select * from tournament_score";
-            $query = mysqli_query($conn, $q);
-            while ($res = mysqli_fetch_array($query)) {
+                $q = "select * from tournament_score";
+                $query = mysqli_query($conn, $q);
+                while ($res = mysqli_fetch_array($query)) {
 
 
-            ?>
-                <tr>
-                    <td><?php echo $res['id']; ?></td>
-                    <td><?php echo $res['teams']; ?> </td>
-                    <td><?php echo $res['play']; ?> </td>
-                    <td><?php echo $res['win']; ?> </td>
-                    <td><?php echo $res['loose']; ?> </td>
-                    <td><?php echo $res['tie']; ?> </td>
-                    <td><?php echo $res['draw']; ?> </td>
-                    <td><?php echo $res['NR']; ?> </td>
-                    <td><?php echo $res['PCT']; ?> </td>
-                    <td><?php echo $res['PTS']; ?> </td>
+                ?>
+                    <tr>
+                        <td><?php echo $res['id']; ?></td>
+                        <td><?php echo $res['teams']; ?> </td>
+                        <td><?php echo $res['play']; ?> </td>
+                        <td><?php echo $res['win']; ?> </td>
+                        <td><?php echo $res['loose']; ?> </td>
+                        <td><?php echo $res['tie']; ?> </td>
+                        <td><?php echo $res['draw']; ?> </td>
+                        <td><?php echo $res['NR']; ?> </td>
+                        <td><?php echo $res['PCT']; ?> </td>
+                        <td><?php echo $res['PTS']; ?> </td>
+
+                    </tr>
+                <?php
+                }
+                ?>
+            </table>
+
+        </section>
+
+        <section style="margin-bottom: 110px;">
+            <h1>Venue / Results</h1>
+
+
+            <table style="margin-top: 60px;">
+
+                <tr id="header">
+                    <th>Id</th>
+                    <th>Match</th>
+                    <th>Venue</th>
+                    <th>Results</th>
 
                 </tr>
-            <?php
-            }
-            ?>
-        </table>
-    </div>
+                <?php
 
-    <h1 id="table1">Venue / Results</h1>
-    <!-- <hr> -->
+                include 'pages/forms/conn.php';
 
-    <table id="table_1">
-
-        <tr id="header">
-            <th>Id</th>
-            <th>Match</th>
-            <th>Venue</th>
-            <th>Results</th>
-
-        </tr>
-        <?php
-
-        include 'pages/forms/conn.php';
-
-        $q = "select * from venue";
-        $query = mysqli_query($conn, $q);
-        while ($res = mysqli_fetch_array($query)) {
+                $q = "select * from venue";
+                $query = mysqli_query($conn, $q);
+                while ($res = mysqli_fetch_array($query)) {
 
 
-        ?>
-            <tr>
-                <td><?php echo $res['id']; ?></td>
-                <td><?php echo $res['match']; ?> </td>
-                <td><?php echo $res['venue']; ?> </td>
-                <td><?php echo $res['results']; ?> </td>
+                ?>
+                    <tr>
+                        <td><?php echo $res['id']; ?></td>
+                        <td><?php echo $res['match']; ?> </td>
+                        <td><?php echo $res['venue']; ?> </td>
+                        <td><?php echo $res['results']; ?> </td>
 
-            </tr>
-        <?php
-        }
-        ?>
-    </table>
+                    </tr>
+                <?php
+                }
+                ?>
+            </table>
+        </section>
+        <div class="footer" style="background-color: #333; height:50px;">
+            <br>
+            <h6 style="text-align: center;margin-top:-10px; color: white;">Copyright © 2021 <a href="index.php" style="color:#16a085; text-decoration:none">Cricket League Tournament</a>. All rights reserved.</h6>
+        </div>
 
-    <div class="footer" style="background-color: #333; height:50px;">
-        <br>
-        <h6 style="text-align: center;margin-top:-10px; color: white;">Copyright © 2021 <a href="index.php" style="color:#16a085; text-decoration:none">Cricket League Tournament</a>. All rights reserved.</h6>
-    </div>
 
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js"></script>
     </div>
 </body>
 

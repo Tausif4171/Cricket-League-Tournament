@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect('localhost','root');
+$conn = mysqli_connect('localhost:3307','root');
 mysqli_select_db($conn,'cricket');
 
 
